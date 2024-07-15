@@ -6,8 +6,7 @@ This Python script fetches issues from a SonarQube project and exports them to a
 ## Prerequisites
 
 - Python 3.x
-- `requests` library
-- `pandas` library
+- `requests`, `pandas`, `openpyxl` library
 - Access to a SonarQube instance with an appropriate token
 
 ## Installation
@@ -22,7 +21,7 @@ cd sonarqube-issues-export-to-excel
 2. Install the required Python libraries:
 
 ```bash
-pip install requests pandas
+pip install requests pandas openpyxl
 ```
 
 ## Usage
