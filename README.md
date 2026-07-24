@@ -23,30 +23,36 @@ cd sonarqube-issues-export-to-excel
 2. Install the required Python libraries:
 
 ```bash
-pip install requests pandas openpyxl
+pip install requests pandas openpyxl python-dotenv
 ```
 
 ## Configuration
 
-Configure the script using environment variables. The script works with both local SonarQube instances and SonarCloud.
+Configuration can be stored in a .env file in the project root.
 
 ### For Local SonarQube Instance (default)
 
 ```bash
-export SONAR_URL='http://localhost:9000/api/issues/search'   # Local SonarQube instance
-export SONAR_PROJECT_KEY='your-project-key'                  # Your project key
-export SONAR_TOKEN='your-authentication-token'               # Your authentication token
+SONAR_URL=http://localhost:9000/api/issues/search   # Local SonarQube instance
+SONAR_PROJECT_KEY=your-project-key                  # Your project key
+SONAR_TOKEN='your-authentication-token'               # Your authentication token
 ```
 
 ### For SonarCloud
 
 ```bash
-export SONAR_URL='https://sonarcloud.io/api/issues/search'   # SonarCloud instance
-export SONAR_PROJECT_KEY='your-project-key'                  # Your project key
-export SONAR_TOKEN='your-authentication-token'               # Your authentication token
+SONAR_URL='https://sonarcloud.io/api/issues/search'   # SonarCloud instance
+SONAR_PROJECT_KEY='your-project-key'                  # Your project key
+SONAR_TOKEN='your-authentication-token'               # Your authentication token
 ```
 
-Alternatively, you can edit these values directly in the script.
+Alternatively, you can edit these values directly in the script or by setting system environment variables(not recommended).
+
+```bash
+export SONAR_URL=http://localhost:9000/api/issues/search   # Local SonarQube instance
+export SONAR_PROJECT_KEY=your-project-key                  # Your project key
+export SONAR_TOKEN='your-authentication-token'               # Your authentication token
+```
 
 ## Usage
 

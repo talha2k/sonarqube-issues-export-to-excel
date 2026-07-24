@@ -5,15 +5,19 @@ try:
     import os
     import argparse
     from datetime import datetime, timedelta
+    from dotenv import load_dotenv
 except ImportError as e:
     print(f"Missing required dependency: {e}")
-    print("Run: pip install requests pandas openpyxl")
+    print("Run: pip install requests pandas openpyxl python-dotenv")
     exit(1)
 
+#load env file
+load_dotenv()
+
 # SonarQube parameters
-SONARQUBE_URL = os.getenv('SONAR_URL', 'http://localhost:9000/api/issues/search') #Sonar Instance URL
-PROJECT_KEY = os.getenv('SONAR_PROJECT_KEY', '') #Your Project Key
-TOKEN = os.getenv('SONAR_TOKEN', '') #Your Project Token
+SONARQUBE_URL = os.getenv("SONAR_URL", "http://localhost:9000/api/issues/search")
+PROJECT_KEY = os.getenv("SONAR_PROJECT_KEY", "")
+TOKEN = os.getenv("SONAR_TOKEN", "")
 
 # Add basic input validation
 if not PROJECT_KEY or not TOKEN:
