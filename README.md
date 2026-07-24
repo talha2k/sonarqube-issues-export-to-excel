@@ -33,17 +33,17 @@ Configuration can be stored in a .env file in the project root.
 ### For Local SonarQube Instance (default)
 
 ```bash
-SONAR_URL=http://localhost:9000/api/issues/search   # Local SonarQube instance
-SONAR_PROJECT_KEY=your-project-key                  # Your project key
-SONAR_TOKEN='your-authentication-token'               # Your authentication token
+SONAR_URL=http://localhost:9000/api/issues/search       # Local SonarQube instance
+SONAR_PROJECT_KEY=your-project-key                      # Your project key
+SONAR_TOKEN='your-authentication-token'                 # Your authentication token
 ```
 
 ### For SonarCloud
 
 ```bash
-SONAR_URL='https://sonarcloud.io/api/issues/search'   # SonarCloud instance
-SONAR_PROJECT_KEY='your-project-key'                  # Your project key
-SONAR_TOKEN='your-authentication-token'               # Your authentication token
+SONAR_URL='https://sonarcloud.io/api/issues/search'     # SonarCloud instance
+SONAR_PROJECT_KEY='your-project-key'                    # Your project key
+SONAR_TOKEN='your-authentication-token'                 # Your authentication token
 ```
 
 Alternatively, you can edit these values directly in the script or by setting system environment variables(not recommended).
@@ -51,7 +51,7 @@ Alternatively, you can edit these values directly in the script or by setting sy
 ```bash
 export SONAR_URL=http://localhost:9000/api/issues/search   # Local SonarQube instance
 export SONAR_PROJECT_KEY=your-project-key                  # Your project key
-export SONAR_TOKEN='your-authentication-token'               # Your authentication token
+export SONAR_TOKEN='your-authentication-token'             # Your authentication token
 ```
 
 ## Usage
